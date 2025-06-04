@@ -2,7 +2,9 @@
 # Access Control System
 
 Access Control System is an ESP32-based project that provides RFID-based access management.  
-It features Wi-Fi connectivity, Firebase integration for logging entries, and LCD display feedback.
+It features Wi-Fi connectivity, Firebase integration for logging entries, and LCD display feedback.  
+Additionally, a **Flutter mobile app** was developed to monitor RFID access logs **in real-time** from Firebase.
+
 
 ## 📚 Project Structure
 
@@ -116,6 +118,28 @@ idf.py flash monitor
 | VCC           | 3.3V            |
 | GND           | GND             |
 
+
+## 📱 Access Control Viewer App
+
+To complement the Access Control System, I developed a **Flutter mobile application** that listens to the **Firebase Realtime Database**.
+
+### 🚀 Key Features
+
+- Connects to Firebase Realtime Database.
+- **Listens in real-time** to RFID card scan logs.
+- Displays a **live list** of:
+  - UID of the scanned card.
+  - Timestamp of the scan.
+- Uses secure **Email/Password Authentication** (no login screen — credentials are hidden from the repository).
+- Instant updates — **no manual refresh** needed.
+
+### 📷 Demo
+
+<p align="center">
+  <img src="assets/demo.gif" width="300"/>
+</p>
+
+*(The app showing real-time access logs appearing automatically as they are added to Firebase.)*
 
 ## 🚀 Future Improvements
 
